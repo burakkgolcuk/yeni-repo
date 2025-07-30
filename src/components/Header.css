@@ -1,0 +1,41 @@
+.banner {
+  background-image: url('/assets/iteration-1/home-banner.png');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px 180px 20px;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-family: 'Satisfy', cursive;
+  color: yellow;
+  margin-top: 10px;
+}
+
+.main-slogan {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.btn-order {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #FFBA08;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+}

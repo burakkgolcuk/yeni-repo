@@ -1,0 +1,39 @@
+/* style.css içine ekle */
+.navbar {
+  background-color: #D62828;
+  padding: 1rem 0;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  opacity: 0.8;
+  border-bottom: 2px solid white;
+}
