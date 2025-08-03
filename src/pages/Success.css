@@ -1,0 +1,27 @@
+.success-container {
+  background-color: #CE2829; /* Anasayfadaki kırmızı ton */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.success-logo {
+  width: 180px;
+  margin-bottom: 2rem;
+}
+
+.success-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.success-container p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
