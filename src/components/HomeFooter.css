@@ -1,0 +1,40 @@
+.home-footer {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-top div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  margin: 0.3rem 0;
+}
+
+.insta-images {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}

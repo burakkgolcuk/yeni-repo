@@ -1,28 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
+// src/pages/Home.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
+import banner from "../assets/iteration-1-images/home-banner.png";
 
 export default function Home() {
   return (
-    <div className="home-page">
-      <header className="home-header">
-        <h1>Teknolojik Yemekler</h1>
-        <p>Lezzetin teknolojik hali!</p>
-        <Link to="/siparis" className="order-button">
-          Hemen Sipariş Ver
-        </Link>
-      </header>
-
-      <section className="features">
-        <h2>Popüler Ürünler</h2>
-        <ul>
-          <li>Terminal Pizza</li>
-          <li>useEffect Tavuklu Pizza</li>
-          <li>Testler Geçti Mutlu Burger</li>
-        </ul>
+    <div className="home-container">
+      <section
+        className="hero-section"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <div className="hero-content">
+          <span className="tagline">fırsatı kaçırma</span>
+          <h3>KOD ACIKTIRIR</h3>
+          <h1>PIZZA, DOYURUR</h1>
+          <Link to="/order">
+            <button className="btn">ACIKTIM</button>
+          </Link>
+        </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

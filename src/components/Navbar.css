@@ -1,6 +1,5 @@
-/* style.css içine ekle */
 .navbar {
-  background-color: #D62828;
+  background-color: #CE2829; /* Kırmızı arka plan */
   padding: 1rem 0;
   color: white;
   font-family: 'Barlow', sans-serif;
@@ -9,20 +8,22 @@
 .navbar-container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  font-family: 'Satisfy', cursive;
-  font-size: 1.8rem;
+.logo img {
+  height: 40px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {

@@ -1,0 +1,164 @@
+.order-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.order-form h1 {
+  color: #D62828;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.pizza-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* ✅ Yan yana boyut ve hamur seçimi */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group span {
+  color: red;
+}
+
+.radio-group.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group input,
+.checkbox-group input {
+  margin-right: 6px;
+}
+
+/* ✅ Ek malzeme 3 sütun halinde sade */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 10px;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ✅ Not alanı */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* ✅ Adet ve özet alanı */
+.order-summary {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.adet-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.quantity-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-buttons button {
+  background: #D62828;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ Buton */
+.order-button {
+  display: block;
+  width: 100%;
+  background: #FFBA08;
+  color: black;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* ✅ Topping uyarı */
+.topping-limit {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* ✅ Mobile responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adet-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}

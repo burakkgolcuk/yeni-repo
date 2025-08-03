@@ -2,14 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomeFooter from './components/HomeFooter';
+import HomeFooter from './components/HomeFooter'; // sadece anasayfa için
 
 import Home from './pages/Home';
 import Order from './pages/Order';
 import Success from './pages/Success';
 
-import './style.css'; // global css
+import './style.css';
 
 function AppContent() {
   const location = useLocation();
@@ -25,7 +24,8 @@ function AppContent() {
         <Route path="/success" element={<Success />} />
       </Routes>
 
-      {isHomePage ? <HomeFooter /> : <Footer />}
+      {/* 🔥 Footer sadece anasayfada olacak */}
+      {isHomePage && <HomeFooter />}
     </>
   );
 }
