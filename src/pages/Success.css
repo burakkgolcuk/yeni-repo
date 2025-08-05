@@ -1,27 +1,51 @@
 .success-container {
-  background-color: #CE2829; /* Anasayfadaki kırmızı ton */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #ce2829;
   color: white;
-  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
   text-align: center;
-  padding: 1rem;
+  padding: 50px 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .success-logo {
-  width: 180px;
-  margin-bottom: 2rem;
+  width: 150px;
+  margin-bottom: 20px;
 }
 
-.success-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.order-summary-box {
+  background: white;
+  color: black;
+  max-width: 500px;
+  margin: 40px auto 0;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.success-container p {
-  font-size: 1.5rem;
-  font-weight: 600;
+.order-summary-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ce2829;
+  font-size: 22px;
+}
+
+.order-summary-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-summary-box li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.total-price {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ce2829;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
