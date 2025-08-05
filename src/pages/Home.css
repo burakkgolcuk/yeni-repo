@@ -1,111 +1,234 @@
-/* src/pages/Home.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Satisfy&display=swap');
-
-.home-container {
-  font-family: 'Barlow', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-section {
-  width: 100vw;
-  height: 100vh; /* 👈 ekran yüksekliği kadar */
-  background-image: url('/src/assets/iteration-1-images/home-banner.png');
-  background-size: cover;       /* görsel taşmadan tam ekranı kaplasın */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Banner */
+.banner {
+  color: white;
+  text-align: center;
+  padding: 60px 20px 180px 20px;
+  background-image: url('/assets/iteration-1/home-banner.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.hero-content {
+.logo-title {
+  font-family: 'Londrina Solid', cursive;
   color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .tagline {
-  background-color: #fff;
-  color: #D62828;
-  font-weight: bold;
-  display: inline-block;
-  padding: 6px 24px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 24px;
-}
-
-.hero-content h3 {
-  font-size: 36px;
-  margin: 12px 0;
-}
-
-.hero-content h1 {
-  font-size: 64px;
+  color: yellow;
   font-family: 'Satisfy', cursive;
-  margin: 16px 0;
+  font-size: 1.3rem;
+}
+
+.main-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.banner .btn {
+  background: #FFBA08;
+  color: #000;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background: #f5f5f5;
+  font-family: 'Barlow', sans-serif;
+}
+
+.categories span {
+  background: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Offer Section */
+.offer-section {
+  display: flex;
+  gap: 20px;
+  max-width: 50em;
+  margin: 40px auto;
+  height: 300px;
+}
+
+.offer-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-card.black,
+.offer-card.yellow {
+  flex: 1;
+  justify-content: space-between;
+}
+
+.offer-card.yellow {
+  color: #333;
+}
+
+.offer-text {
+  max-width: 60%;
 }
 
 .btn {
-  background-color: #FFBA08;
-  color: #000;
+  background-color: white;
+  color: #D62828;
   border: none;
-  padding: 14px 36px;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 
-.btn:hover {
-  background-color: #e6a807;
+.btn.small {
+  font-size: 12px;
+  padding: 6px 12px;
+  border: none;
 }
 
-/* Mobil uyumluluk */
+/* Top Products */
+.top-products {
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-subtitle {
+  color: #D62828;
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-products .categories {
+  background: transparent;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+.top-products .categories span {
+  border: 1px solid #ddd;
+}
+
+.top-products .categories span.active {
+  background-color: black;
+  color: white;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Barlow', sans-serif;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 500px;
-    padding: 20px;
+  .offer-section {
+    flex-direction: column;
+    height: auto;
   }
 
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .hero-content h3 {
-    font-size: 24px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 10px 24px;
+  .product-card {
+    width: 45%;
   }
 }
-/* Mobil uyum (max-width: 768px altında geçerli) */
-@media (max-width: 768px) {
-  .navbar-container {
+
+@media (max-width: 480px) {
+  .categories {
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-    padding: 1rem;
+    align-items: center;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
+  .product-card {
     width: 100%;
-  }
-
-  .banner {
-    padding: 40px 10px 100px 10px;
-    background-position: center;
-    background-size: cover;
   }
 
   .banner h1 {
@@ -113,41 +236,6 @@
   }
 
   .banner h3 {
-    font-size: 20px;
-  }
-
-  .banner .btn {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .insta-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 3 yerine 2 sütun */
+    font-size: 18px;
   }
 }
-
-/* Daha küçük ekranlar için ekstra destek (max-width: 480px) */
-@media (max-width: 480px) {
-  .banner h1 {
-    font-size: 22px;
-  }
-
-  .banner h3 {
-    font-size: 16px;
-  }
-
-  .banner .btn {
-    font-size: 12px;
-    padding: 6px 16px;
-  }
-
-  .insta-gallery img {
-    height: 50px;
-  }
-}
-

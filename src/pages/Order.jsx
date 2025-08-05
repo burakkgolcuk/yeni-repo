@@ -40,10 +40,23 @@ export default function Order() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Sipariş Verildi:", formData);
-    navigate("/success", { state: formData });
+  e.preventDefault();
+
+  const orderData = {
+    name: formData.name,
+    size: formData.size,
+    dough: formData.dough,
+    toppings: formData.toppings,
+    notes: formData.notes,
+    quantity: formData.quantity,
+    totalPrice: totalPrice.toFixed(2), // 🔴 toplam tutarı ekledik
   };
+
+  console.log("Sipariş Verildi:", orderData);
+
+  navigate("/success", { state: orderData });
+};
+
 
   const selectedToppingsPrice = formData.toppings.length * toppingPrice;
   const totalPrice = (basePrice + selectedToppingsPrice) * formData.quantity;
