@@ -1,4 +1,6 @@
+// src/components/OfferSection.jsx
 import React from 'react';
+import kart1 from "../assets/iteration-2/pictures/cta/kart-1.png";
 
 export default function OfferSection() {
   return (
@@ -6,10 +8,7 @@ export default function OfferSection() {
       <div className="container">
         <h2>Öne Çıkan Lezzet</h2>
         <div className="offer">
-          <img
-            src="assets/iteration-2/pictures/cta/kart-1.png"
-            alt="Teknolojik Pizza"
-          />
+          <img src={kart1} alt="Teknolojik Pizza" />
           <div className="content">
             <h3>Position Absolute Acı Pizza</h3>
             <p>
