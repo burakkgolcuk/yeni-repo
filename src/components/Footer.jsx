@@ -1,7 +1,7 @@
+// src/components/Footer.jsx
 import React from "react";
 import "./Footer.css";
 
-// Görsel yollarını import et
 import insta0 from "../assets/iteration-2-images/footer/insta/li-0.png";
 import insta1 from "../assets/iteration-2-images/footer/insta/li-1.png";
 import insta2 from "../assets/iteration-2-images/footer/insta/li-2.png";
@@ -32,7 +32,7 @@ export default function Footer() {
         <h4>Instagram</h4>
         <div className="insta-gallery">
           {instaImages.map((img, index) => (
-            <img key={index} src={img} alt={`insta-${index}`} />
+            <img key={index} src={img} alt={`insta-${index}`} loading="lazy" />
           ))}
         </div>
       </div>
