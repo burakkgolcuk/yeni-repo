@@ -3,6 +3,10 @@ import React from "react";
 import logo from "../assets/iteration-1-images/logo.svg";
 import "./Footer.css";
 
+// klasördeki tüm insta görsellerini otomatik al
+const modules = import.meta.glob("../assets/iteration-2-images/footer/insta/*.png", { eager: true });
+const instaImages = Object.values(modules).map(m => m.default).sort();
+
 export default function HomeFooter() {
   return (
     <footer>
@@ -30,12 +34,8 @@ export default function HomeFooter() {
         <div className="footer-section">
           <h4>Instagram</h4>
           <div className="insta-gallery">
-            {[0, 1, 2, 3, 4, 5].map(i => (
-              <img
-                key={i}
-                src={`/src/assets/iteration-2-images/footer/insta/li-${i}.png`}
-                alt={`Insta ${i}`}
-              />
+            {instaImages.map((src, i) => (
+              <img key={i} src={src} alt={`Insta ${i}`} loading="lazy" />
             ))}
           </div>
         </div>
