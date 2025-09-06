@@ -1,5 +1,6 @@
+// src/components/Header.jsx
 import React from 'react';
-import './Header.css'; // stil dosyasını sonradan oluşturacağız
+import './Header.css';
 
 export default function Header() {
   return (
